@@ -39,7 +39,7 @@ const LogInToWebS = () => {
               type="email"
               id="email"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
-              placeholder="Enter your email"
+              placeholder="Email Address"
             />
           </div>
 
