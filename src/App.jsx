@@ -9,6 +9,9 @@ const WebS = () => {
   // const isOwnerPath = useLocation().pathname.includes("/owner");
   return (
     <>
+    <ProfileWebS/>
+    <LogInToWebS/>
+
     <Router>
         <Routes>
           <Route path='/' element={<Home />} />
