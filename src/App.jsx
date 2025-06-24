@@ -8,19 +8,23 @@ import { Home, Auth, Orders } from "./pages";
 const WebS = () => {
   // const isOwnerPath = useLocation().pathname.includes("/owner");
   return (
-    <>
-    <ProfileWebS/>
-    <LogInToWebS/>
 
     <Router>
         <Routes>
-          <Route path='/' element={<Home />} />
+
+        {/* Splash Screen - แสดงแรกสุดแล้ว redirect ไป /LogInToWebS */}
+        <Route path="/" element={<ProfileWebS />} />
+        
+        {/* หน้า Login */}
+        <Route path="/LogInToWebS" element={<LogInToWebS />} />     
+
+        
+          <Route path='/home' element={<Home />} />
           <Route path='/auth' element={<Auth />} />
           <Route path='/Orders' element={<Orders />} />
         </Routes>
     </Router>
     
-    </>
   )
 }
-export default WebS
+export default WebS;

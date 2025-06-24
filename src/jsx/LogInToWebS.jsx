@@ -1,7 +1,11 @@
 import React from "react";
 
 import ProfilePngMain from "../img/Profile-PNG_Main.png"
+
 import { FaCamera } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+import { FaApple } from "react-icons/fa";
 
 const LogInToWebS = () => {
   return (
@@ -9,7 +13,7 @@ const LogInToWebS = () => {
                     flex flex-col items-center justify-center">
 
       {/* Main Container */}
-      <div className="min-h-screen sm:min-h-[85vh] w-full max-w-md bg-white shadow-lg p-8 flex flex-col items-center justify-center">
+      <div className="min-h-screen sm:min-h-[85vh] w-full max-w-md bg-white rounded-[15px] shadow-lg p-8 flex flex-col items-center justify-center">
         {/* Header */}
         <div className="text-center mb-8 w-full flex flex-col items-center">
           <h1 className="text-[48px] font-[750] text-[#ff8000] mb-4 w-full">Pun Cafe</h1>
@@ -32,13 +36,13 @@ const LogInToWebS = () => {
         </div>
 
         {/* Login Form */}
-        <form className="space-y-6">
+        <form className="space-y-3 m-[-20px]">
           {/* Email Field */}
           <div>
             <input
               type="email"
               id="email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
+              className="w-[350px] px-[10px] py-2 border-2 border-gray-300 rounded-lg focus:ring-1 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
               placeholder="Email Address"
             />
           </div>
@@ -48,8 +52,8 @@ const LogInToWebS = () => {
             <input
               type="tel"
               id="phone"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
-              placeholder="Enter your phone number"
+              className="w-[350px] px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-1 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
+              placeholder="Phone Number"
             />
           </div>
 
@@ -58,14 +62,14 @@ const LogInToWebS = () => {
             <input
               type="password"
               id="password"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
-              placeholder="Enter your password"
+              className="w-[350px] px-4 py-2 border-2 border-gray-300 rounded-lg focus:ring-1 focus:ring-amber-500 focus:border-amber-500 outline-none transition"
+              placeholder="Password"
             />
           </div>
 
           {/* Forgot Password Link */}
-          <div className="flex justify-end">
-            <a href="#" className="text-sm text-amber-600 hover:text-amber-800">
+          <div className="flex justify-center">
+            <a href="#" className="text-[14px] text-[#ff8e25] hover:text-[#ff5900]">
               Forgot password?
             </a>
           </div>
@@ -73,30 +77,36 @@ const LogInToWebS = () => {
           {/* Login Button */}
           <button
             type="submit"
-            className="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 px-4 rounded-lg font-medium transition duration-300"
+            className="w-full py-1 px-4 bg-[#ff8e25] cursor-pointer hover:bg-[#ff7b00] text-white rounded-lg font-bold text-[25px] transition duration-300"
           >
-            Login
+            Log In
           </button>
         </form>
 
         {/* Divider */}
         <div className="flex items-center my-6">
           <div className="flex-grow border-t border-gray-300"></div>
-          <span className="mx-4 text-gray-500">Or sign in with</span>
+          <span className="mx-4 text-gray-500 text-[14px]">Or sign in with</span>
           <div className="flex-grow border-t border-gray-300"></div>
         </div>
 
         {/* Social Login Placeholder */}
-        <div className="flex justify-center space-x-4 mb-6">
+        <div className="flex justify-center space-x-6 mb-6 text-[25px]">
           {/* Social icons would go here */}
-          <div className="h-10 w-10 bg-gray-200 rounded-full"></div>
-          <div className="h-10 w-10 bg-gray-200 rounded-full"></div>
-          <div className="h-10 w-10 bg-gray-200 rounded-full"></div>
+          <a href="#" className="transition-all duration-300 hover:scale-110 active:scale-95">
+            <FaFacebook className="text-blue-600" />
+          </a>
+          <a href="#" className="transition-all duration-300 hover:scale-110 active:scale-95">
+            <FcGoogle />
+          </a>
+          <a href="#" className="transition-all duration-300 hover:scale-110 active:scale-95">
+            <FaApple />
+          </a>
         </div>
 
         {/* Language Selector */}
         <div className="flex justify-center">
-          <select className="text-sm text-gray-600 bg-transparent border-none focus:ring-0">
+          <select className="w-[350px] text-sm text-gray-600 bg-transparent border-none focus:ring-0">
             <option>Choose language</option>
             <option>English</option>
             <option>ไทย</option>
